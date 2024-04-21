@@ -1,3 +1,4 @@
+// Package cmd application commands
 package cmd
 
 import (
@@ -5,6 +6,7 @@ import (
 )
 
 var (
+	// RootCmd cobra cli root command
 	RootCmd = &cobra.Command{
 		Use:   "chaaya",
 		Short: "Chaaya command line client for structx blockchain",
@@ -12,6 +14,7 @@ var (
 	}
 )
 
+// Execute root command
 func Execute() error {
 	return RootCmd.Execute()
 }
