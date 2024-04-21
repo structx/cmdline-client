@@ -8,7 +8,8 @@ import (
 var (
 	walletCmd = &cobra.Command{
 		Use:   "wallet",
-		Short: "create wallet",
+		Short: "wallet subcommands",
+		Long:  "All available wallet subcommands supported within the application",
 	}
 )
 
