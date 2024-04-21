@@ -1,8 +1,10 @@
 package wallet_test
 
 import (
+	"bytes"
 	"testing"
 
+	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/x/exp/teatest"
 	"github.com/trevatk/chaaya/cmd"
 	"github.com/trevatk/chaaya/cmd/wallet"
@@ -21,9 +23,14 @@ func Test_ExecuteCreateWallet(t *testing.T) {
 		teatest.WaitFor(
 			t,
 			tm.Output(),
-			func(_ []byte) bool {
-				return true
+			func(bts []byte) bool {
+				return !bytes.Equal([]byte{}, bts)
 			},
 		)
+
+		tm.Send(tea.KeyMsg{
+			Type:  tea.KeyRunes,
+			Runes: []rune("q"),
+		})
 	})
 }

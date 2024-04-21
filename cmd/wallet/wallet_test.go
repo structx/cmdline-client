@@ -1,4 +1,4 @@
-package cmd_test
+package wallet_test
 
 import (
 	"bytes"
@@ -8,12 +8,12 @@ import (
 	"github.com/trevatk/chaaya/cmd"
 )
 
-func Test_ExecuteRootCmd(t *testing.T) {
-	t.Run("root", func(t *testing.T) {
+func Test_ExecuteWallet(t *testing.T) {
+	t.Run("help", func(t *testing.T) {
 
 		b := bytes.NewBuffer(nil)
 		cmd.RootCmd.SetOutput(b)
-		cmd.RootCmd.SetArgs([]string{})
+		cmd.RootCmd.SetArgs([]string{"wallet"})
 
 		err := cmd.Execute()
 		if err != nil {

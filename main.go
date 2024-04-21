@@ -2,7 +2,7 @@
 package main
 
 import (
-	"os"
+	"github.com/charmbracelet/log"
 
 	"github.com/trevatk/chaaya/cmd"
 	_ "github.com/trevatk/chaaya/cmd/wallet"
@@ -11,7 +11,6 @@ import (
 func main() {
 	err := cmd.Execute()
 	if err != nil {
-		os.Exit(1)
+		log.Errorf("failed to execute command %v", err)
 	}
-	os.Exit(0)
 }
