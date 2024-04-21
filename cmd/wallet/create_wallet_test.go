@@ -21,7 +21,7 @@ func Test_ExecuteCreateWallet(t *testing.T) {
 		teatest.WaitFor(
 			t,
 			tm.Output(),
-			func(bts []byte) bool {
+			func(_ []byte) bool {
 				return true
 			},
 		)

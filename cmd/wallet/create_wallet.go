@@ -83,16 +83,19 @@ var (
 	}()
 )
 
+// CreateWalletModel bubbletea create wallet command model
 type CreateWalletModel struct {
 	content  string
 	ready    bool
 	viewport viewport.Model
 }
 
+// Init model
 func (m CreateWalletModel) Init() tea.Cmd {
 	return nil
 }
 
+// Update model from user input
 func (m CreateWalletModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 	var (
@@ -135,6 +138,7 @@ func (m CreateWalletModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return m, tea.Batch(cmds...)
 }
 
+// View returns bubbletea rendered view
 func (m CreateWalletModel) View() string {
 	if !m.ready {
 		return "\n Initializing..."
