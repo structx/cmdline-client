@@ -4,8 +4,8 @@ package main
 import (
 	"github.com/charmbracelet/log"
 
-	"github.com/trevatk/chaaya/cmd"
-	_ "github.com/trevatk/chaaya/cmd/wallet"
+	"github.com/structx/cmdline-client/cmd"
+	_ "github.com/structx/cmdline-client/cmd/wallet"
 )
 
 func main() {

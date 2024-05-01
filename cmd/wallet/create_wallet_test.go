@@ -6,8 +6,8 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/x/exp/teatest"
-	"github.com/trevatk/chaaya/cmd"
-	"github.com/trevatk/chaaya/cmd/wallet"
+	"github.com/structx/cmdline-client/cmd"
+	"github.com/structx/cmdline-client/cmd/wallet"
 )
 
 func Test_ExecuteCreateWallet(t *testing.T) {
