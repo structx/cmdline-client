@@ -5,7 +5,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/trevatk/chaaya/cmd"
+	"github.com/structx/cmdline-client/cmd"
 )
 
 func Test_ExecuteWallet(t *testing.T) {

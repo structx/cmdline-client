@@ -1,4 +1,4 @@
-module github.com/trevatk/chaaya
+module github.com/structx/cmdline-client
 
 go 1.22.2
 

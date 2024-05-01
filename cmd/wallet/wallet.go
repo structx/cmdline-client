@@ -2,7 +2,7 @@ package wallet
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/trevatk/chaaya/cmd"
+	"github.com/structx/cmdline-client/cmd"
 )
 
 var (
